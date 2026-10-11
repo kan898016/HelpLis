@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Помогите лысой собрать донат на Геншин Impact</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        section {
+            padding: 30px 20px;
+        }
+        .info, .profile, .goal, .plea {
+            border-bottom: 1px solid #eee;
+        }
+        .info h2, .profile h2, .goal h2, .plea h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info h2::before, .profile h2::before, .goal h2::before, .plea h2::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #ff9a9e;
+            border-radius: 50%;
+        }
+        .username-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+        .username {
+            font-size: 1.5rem;
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .username:hover {
+            text-decoration: underline;
+        }
+        #copyBtn {
+            padding: 8px 16px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        #copyBtn:hover {
+            background: #2c80b9;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .btn-primary:hover {
+            background: #219955;
+        }
+        .progress-bar {
+            height: 24px;
+            background: #ecf0f1;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        .plea blockquote {
+            font-style: italic;
+            color: #555;
+            border-left: 4px solid #ff9a9e;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        .plea cite {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 15px auto;
+                border-radius: 8px;
+            }
+            header {
+                padding: 30px 15px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            section {
+                padding: 20px 15px;
+            }
+            .username-box {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            #copyBtn {
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Помогите лысой собрать донат на Геншин Impact</h1>
+            <p class="tagline">Ей нужны звёзды в Telegram, чтобы поддержать любимую игру</p>
+        </header>
+
+        <section class="info">
+            <h2>О чём речь?</h2>
+            <p>
+                Наш лысый друг <strong>@wufyhg</strong> отчаянно нуждается в звёздах Telegram для доната в <em>Genshin Impact</em>.
+                Без вашей помощи она не получит желаемого персонажа или ресурсы. Каждая звезда — это шанс сделать её день лучше!
+            </p>
+        </section>
+
+        <section class="profile">
+            <h2>Как помочь?</h2>
+            <div class="username-box">
+                <span class="label">Telegram:</span>
+                <a href="https://t.me/wufyhg" target="_blank" class="username">@wufyhg</a>
+                <button id="copyBtn">Копировать</button>
+            </div>
+            <p class="instruction">
+                Нажмите на username или кнопку «Копировать», затем перейдите в Telegram и отправьте звёзды через платформу донатов.
+            </p>
+            <a href="https://t.me/wufyhg" target="_blank" class="btn-primary">
+                Открыть чат с @wufyhg
+            </a>
+        </section>
+
+        <section class="goal">
+            <h2>Цель: 5000 звёзд</h2>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <p id="progressText">Собрано: 0 / 5000 звёзд</p>
+            <p class="note">
+                *Цель условная, любая сумма будет с благодарностью принята.
+            </p>
+        </section>
+
+        <section class="plea">
+            <h2>Мольба от лысой</h2>
+            <blockquote>
+                «Пожалуйста, помогите мне собрать достаточно звёзд, чтобы я могла поддержать своих любимых персонажей в Genshin Impact.
+                Каждая звезда делает меня чуть ближе к мечте. Спасибо за вашу доброту и поддержку!»<br>
+                <cite>@wufyhg</cite>
+            </blockquote>
+        </section>
+
+        <footer>
+            <p>Сайт создан в поддержку друга. Все донаты идут напрямую через Telegram.</p>
+            <p>&copy; 2026 Помощь лысой. Все права защищены.</p>
+        </footer>
+    </div>
+    <script>
+        // Copy username to clipboard
+        document.getElementById('copyBtn').addEventListener('click', () => {
+            const username = '@wufyhg';
+            navigator.clipboard.writeText(username).then(() => {
+                const btn = document.getElementById('copyBtn');
+                const originalText = btn.textContent;
+                btn.textContent = 'Скопировано!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Не удалось скопировать: ', err);
+                alert('Не удалось скопировать в буфер обмена.');
+            });
+        });
+
+        // Simulate progress (for demo)
+        const progressBar = document.getElementById('progress');
+        const progressText = document.getElementById('progressText');
+        const goal = 5000;
+        const current = Math.floor(Math.random() * (goal + 1));
+        const percent = (current / goal) * 100;
+        progressBar.style.width = percent + '%';
+        progressText.textContent = `Собрано: ${current} / ${goal} звёзд`;
+    </script>
+</body>
+</html>
