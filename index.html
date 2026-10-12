@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -159,19 +159,119 @@
                 align-self: flex-start;
             }
         }
-    </style>
+            /* Character animation */
+        header .character {
+            font-size: 4rem;
+            margin: 20px 0;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }        /* How It Works section */
+        .how-it-works .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .how-it-works .step {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 2px dashed #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .how-it-works .step:hover {
+            border-style: solid;
+            border-color: #ff9a9e;
+            transform: translateY(-5px);
+            background: white;
+        }
+        
+        .how-it-works .step-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff9a9e;
+            margin-bottom: 15px;
+        }
+        
+        .how-it-works .step-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }        /* Mini-game section */
+        .mini-game {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            border-radius: 16px;
+            margin: 25px 0;
+        }
+        
+        .mini-game h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .game-character {
+            font-size: 6rem;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+        
+        .game-character:hover {
+            transform: scale(1.1);
+        }
+        
+        .game-character:active {
+            transform: scale(0.95);
+        }
+        
+        .game-stars {
+            font-size: 1.5rem;
+            color: #fdcb6e;
+            margin: 15px 0;
+            min-height: 40px;
+        }
+        
+        .game-button {
+            background: #e17055;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .game-button:hover {
+            background: #d35400;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }</style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Помогите лысой собрать донат на Геншин Impact</h1>
+            <div class="character">👨‍🦲</div>
             <p class="tagline">Ей нужны звёзды в Telegram, чтобы поддержать любимую игру</p>
         </header>
 
         <section class="info">
             <h2>О чём речь?</h2>
             <p>
-                Наш лысый друг <strong>@wufyhg</strong> отчаянно нуждается в звёздах Telegram для доната в <em>Genshin Impact</em>.
+                Наш лысый друг <strong>@wudyhg</strong> отчаянно нуждается в звёздах Telegram для доната в <em>Genshin Impact</em>.
                 Без вашей помощи она не получит желаемого персонажа или ресурсы. Каждая звезда — это шанс сделать её день лучше!
             </p>
         </section>
@@ -180,14 +280,14 @@
             <h2>Как помочь?</h2>
             <div class="username-box">
                 <span class="label">Telegram:</span>
-                <a href="https://t.me/wufyhg" target="_blank" class="username">@wufyhg</a>
+                <a href="https://t.me/wudyhg" target="_blank" class="username">@wudyhg</a>
                 <button id="copyBtn">Копировать</button>
             </div>
             <p class="instruction">
                 Нажмите на username или кнопку «Копировать», затем перейдите в Telegram и отправьте звёзды через платформу донатов.
             </p>
-            <a href="https://t.me/wufyhg" target="_blank" class="btn-primary">
-                Открыть чат с @wufyhg
+            <a href="https://t.me/wudyhg" target="_blank" class="btn-primary">
+                Открыть чат с @wudyhg
             </a>
         </section>
 
@@ -202,14 +302,50 @@
             </p>
         </section>
 
+'
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <h2>Как это работает?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Выберите сумму</div>
+                    <p>Решите, сколько звёзд вы хотите отправить в качестве поддержки</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Отправьте через Telegram</div>
+                    <p>Перейдите в чат @wudyhg и отправьте выбранное количество звёзд</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Получите благодарность</div>
+                    <p>Каждая звезда делает лысой ближе к мечте о любимых персонажах в Genshin Impact</p>
+                </div>
+            </div>
+        </section>
+'
+
         <section class="plea">
             <h2>Мольба от лысой</h2>
             <blockquote>
                 «Пожалуйста, помогите мне собрать достаточно звёзд, чтобы я могла поддержать своих любимых персонажей в Genshin Impact.
                 Каждая звезда делает меня чуть ближе к мечте. Спасибо за вашу доброту и поддержку!»<br>
-                <cite>@wufyhg</cite>
+                <cite>@wudyhg</cite>
             </blockquote>
         </section>
+
+'
+        <!-- Mini-Game Section -->
+        <section class="mini-game">
+            <h2>Игра: Помоги лысой собрать звёзды! 🎮</h2>
+            <p>Кликай на лысого персонажа, чтобы собирать звёзды и помогать в реальном времени!</p>
+            <div class="game-character" id="gameChar">👨‍🦲✨</div>
+            <div class="game-stars" id="gameStars">Звёзды: 0</div>
+            <button class="game-button" id="resetBtn">Сбросить счёт</button>
+            <p class="note">*Это демонстрационная игра. Реальные звёзды отправляются через Telegram.</p>
+        </section>
+'
 
         <footer>
             <p>Сайт создан в поддержку друга. Все донаты идут напрямую через Telegram.</p>
@@ -219,7 +355,7 @@
     <script>
         // Copy username to clipboard
         document.getElementById('copyBtn').addEventListener('click', () => {
-            const username = '@wufyhg';
+            const username = '@wudyhg';
             navigator.clipboard.writeText(username).then(() => {
                 const btn = document.getElementById('copyBtn');
                 const originalText = btn.textContent;
@@ -244,3 +380,10 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
